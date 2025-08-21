@@ -2,13 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "aura-acumen/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "dist" }
     }
   ],
   "env": {
-    "VITE_API_URL": "https://data-collection-backend-2log.onrender.com"
+    "VITE_API_URL": "/api"
   },
   "rewrites": [
     {
