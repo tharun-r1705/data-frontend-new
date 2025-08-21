@@ -14,6 +14,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://data-collection-backend-2log.onrender.com/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
