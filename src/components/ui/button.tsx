@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -18,6 +18,12 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-gradient-primary text-white font-semibold shadow-glow-primary hover:shadow-glow-secondary hover:scale-105 transition-all duration-300",
+        glass: "glass-card text-foreground border border-glass-border/30 hover:border-primary/50 hover:shadow-glow-primary backdrop-blur-xl",
+        neon: "bg-transparent border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-background hover:shadow-glow-primary neon-border",
+        success: "bg-success text-white hover:bg-success/90 shadow-glow-success",
+        warning: "bg-warning text-black hover:bg-warning/90",
+        error: "bg-error text-white hover:bg-error/90 shadow-glow-error",
       },
       size: {
         default: "h-10 px-4 py-2",
