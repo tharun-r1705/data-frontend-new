@@ -1,17 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { RoleCard } from '@/components/RoleCard';
 import { GraduationCap, UserCheck, Users, BookOpen } from 'lucide-react';
 
 export const RoleSelection: React.FC = () => {
+  const navigate = useNavigate();
+
   const handleStudentClick = () => {
-    console.log('Student role selected');
-    // TODO: Navigate to student login/dashboard
+    navigate('/auth');
   };
 
   const handleTeacherClick = () => {
-    console.log('Teacher role selected');
-    // TODO: Navigate to teacher login/dashboard
+    navigate('/auth');
   };
 
   return (
