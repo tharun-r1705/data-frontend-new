@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "aura-acumen/package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "env": {
+    "VITE_API_URL": "https://data-collection-backend-2log.onrender.com"
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://data-collection-backend-2log.onrender.com/api/:path*"
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
+
+
